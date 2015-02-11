@@ -3,8 +3,16 @@
 
 {% block title %}{% render_with_template_if_exist "admin/admin_title.html" "Django administration" %} | {{ site_title|default:_('Django site admin') }}{% endblock %}
 
-{% block branding %}
-<a class="navbar-brand" href="{% url 'admin:index' %}">{% if site_header %}{{ site_header }}{% else %}{% render_with_template_if_exist "admin/admin_title.html" "Django administration" %}{% endif %}</a>
+{% block branding%}
+<ul class="nav navbar-nav">
+<li>
+<a class="navbar-brand" href="/">SSLVPN</a>
+</li><li>
+<a href="/index"><img class="ssgm-nav-img" src="{% static "images/connect.png"%}" alt="">链接到设备<span class="sr-only">(current)</span></a></li>
+<li><a href="/addhost"><img class="ssgm-nav-img" src="{% static "images/addlink.png"%}" alt="">添加链接</a></li>
+<li>
+<a class="" href="{% url 'admin:index' %}">{% if site_header %}{{ site_header }}{% else %}<img class="ssgm-nav-img" alt="" src="/static/images/admin.png">{% render_with_template_if_exist "admin/admin_title.html" "Django administration" %}{% endif %}</a>
+</li></ul>
 {% endblock %}
 
 {% block nav-global %}{% endblock %}
