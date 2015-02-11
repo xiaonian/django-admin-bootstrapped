@@ -25,14 +25,10 @@ setup(
     version='2.3.3',
     description='A Bootstrap theme for Django Admin',
     long_description=open(os.path.join(os.path.dirname(__file__), 'README.rst')).read(),
-    url='https://github.com/django-admin-bootstrapped/django-admin-bootstrapped',
+    url='https://github.com/xiaonian/django-admin-bootstrapped',
     license='BSD License',
     platforms=['OS Independent'],
     classifiers=CLASSIFIERS,
-    install_requires=[
-        'setuptools',
-        'Django>=1.6',
-    ],
     packages=find_packages(),
     include_package_data=True,
     zip_safe=False
