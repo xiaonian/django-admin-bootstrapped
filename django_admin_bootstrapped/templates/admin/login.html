@@ -54,7 +54,7 @@
   {% blocktrans %}<h2>管理员登录</h2>{% endblocktrans %}
   {% if form.errors and not form.non_field_errors and not form.this_is_the_login_form.errors %}
     <div class="alert alert-danger">
-       {% blocktrans count counter=form.errors.items|length %}Please correct the error below.{% plural %}Please correct the errors below.{% endblocktrans %}
+       {% blocktrans count counter=form.errors.items|length %}请改正以下错误.{% plural %}请改正以下错误.{% endblocktrans %}
     </div>
   {% endif %}
   {% if form.non_field_errors or form.this_is_the_login_form.errors %}
